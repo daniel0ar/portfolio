@@ -37,7 +37,17 @@ body {
     color: black;
 }
 
-    section .container-fluid {
+body a {
+    text-decoration: none;
+    color: black;
+}
+
+body a:hover {
+    text-decoration: underline;
+    color: #727272 ;
+}
+
+section .container-fluid {
     padding-left:  calc(var(--bs-gutter-x) * 1.4);
     padding-right:  calc(var(--bs-gutter-x) * 1.4);
 }

@@ -73,6 +73,11 @@
     width: 100%;
 }
 
+.products .media-container img:hover{
+    filter: brightness(1.15);
+    transition: 0.5s;
+}
+
 /*---------------------
     Clients Section
 -------------------- */
