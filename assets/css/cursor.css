@@ -1,0 +1,48 @@
+body {
+    cursor: none;
+}
+
+a:hover {
+    cursor: none;
+}
+
+.cursor {
+    width: 35px;
+    height: 35px;
+    border: 7px solid black;
+    border-radius: 50%;
+    position: absolute;
+    transition-timing-function: ease-out;
+    animation: cursorAnim 1s infinite alternate;
+    pointer-events: none;
+    z-index: 1030;
+}
+
+
+@keyframes cursorAnim {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(.8);
+    }
+}
+
+
+@keyframes cursorClick {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(2);
+        opacity: .5;
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.expand {
+    animation: cursorClick .3s forwards;
+    background: rgba(8, 140 , 220, 10);
+}

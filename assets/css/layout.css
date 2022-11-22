@@ -56,3 +56,9 @@ section .media-container{
     overflow: hidden;
     border-radius: 30px;
 }
+
+@media (max-width: 768px) {
+    section .section-text-m {
+        font-size: 2rem;
+    }
+}

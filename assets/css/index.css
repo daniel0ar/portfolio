@@ -24,11 +24,24 @@
 
 .hero .hero-title {
     font-weight: bold;
-    font-size: 80pt;
+    font-size: 7rem;
 }
 
 .hero .hero-title span {
     text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .hero .hero-title {
+      font-size: 3rem;
+      letter-spacing: -2px;
+    }
+}
+
+@media (max-height: 500px) {
+    .hero {
+      height: 120vh;
+    }
 }
 
 /*---------------------
@@ -50,12 +63,20 @@
 }
 
 /*---------------------
-    Services Section
+    Products Section
 -------------------- */
-.services .media-container {
-    margin-bottom: 30px;
+.products .media-container {
+    margin: 30px;
+}
+
+.products .media-container img {
+    width: 100%;
 }
 
 /*---------------------
     Clients Section
 -------------------- */
+.clients {
+    margin-top: 300px;
+    margin-bottom: 300px;
+}
