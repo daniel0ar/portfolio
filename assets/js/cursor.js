@@ -11,3 +11,15 @@ document.addEventListener('click', () => {
         cursor.classList.remove("expand");
     }, 500)
 })
+
+var item = document.getElementsByTagName("a");
+item.forEach(item => {
+    item.addEventListener('mouseover', () => {
+        cursor.classList.add("hover");
+    })
+    
+    item.addEventListener('mouseout', () => {
+        cursor.classList.remove("hover");
+    })
+    
+});

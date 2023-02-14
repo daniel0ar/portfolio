@@ -1,63 +1,38 @@
-
-
-// this class describes the properties of a single particle.
-class Particle {
-  // setting the co-ordinates, radius and the
-  // speed of a particle in both the co-ordinates axes.
-  constructor() {
-    this.x = random(0, width);
-    this.y = random(0, height);
-    this.r = random(1, 8);
-    this.xSpeed = random(-2, 2);
-    this.ySpeed = random(-1, 1.5);
-  }
-
-  // creation of a particle.
-  createParticle() {
-    noStroke();
-    fill('rgba(8,140,220,0.5)');
-    circle(this.x, this.y, this.r);
-  }
-
-  // setting the particle in motion.
-  moveParticle() {
-    if (this.x < 0 || this.x > width)
-      this.xSpeed *= -1;
-    if (this.y < 0 || this.y > height)
-      this.ySpeed *= -1;
-    this.x += this.xSpeed;
-    this.y += this.ySpeed;
-  }
-
-  // this function creates the connections(lines)
-  // between particles which are less than a certain distance apart
-  joinParticles(paraticles) {
-    particles.forEach(element => {
-      let dis = dist(this.x, this.y, element.x, element.y);
-      if (dis < 85) {
-        stroke('rgba(8,140,220,0.04)');
-        line(this.x, this.y, element.x, element.y);
-      }
-    });
-  }
-}
-
-// an array to add multiple particles
-let particles = [];
 function setup() {
   canvas = createCanvas(windowWidth, windowHeight);
   canvas.position(0, 0);
   canvas.style('z-index', '-1');
-  for (let i = 0; i < width / 10; i++) {
-    particles.push(new Particle());
-  }
+  rectMode(CENTER);
 }
 
+let angle1 = 0;
+let angle2 = 0;
+let scalar = 70;
+
+
 function draw() {
-  background('#ffffff');
-  for (let i = 0; i < particles.length; i++) {
-    particles[i].createParticle();
-    particles[i].moveParticle();
-    particles[i].joinParticles(particles.slice(i));
-  }
+  background("#ffffff");
+
+  let ang1 = radians(angle1);
+  let ang2 = radians(angle2);
+
+  let x1 = width / 2 + scalar * cos(ang1);
+  let x2 = width / 2 + scalar * cos(ang2);
+
+  let y1 = height / 2 + scalar * sin(ang1);
+  let y2 = height / 2 + scalar * sin(ang2);
+
+  fill(8,140,220);
+  rect(width * 0.5, height * 0.5, 140, 140);
+
+  fill(0, 102, 153);
+  ellipse(x1, height * 0.5 - 120, scalar, scalar);
+  ellipse(x2, height * 0.5 + 120, scalar, scalar);
+
+  fill(255, 204, 0);
+  ellipse(width * 0.5 - 120, y1, scalar, scalar);
+  ellipse(width * 0.5 + 120, y2, scalar, scalar);
+
+  angle1 += 2;
+  angle2 += 3;
 }

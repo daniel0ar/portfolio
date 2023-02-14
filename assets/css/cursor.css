@@ -13,21 +13,9 @@ a:hover {
     border-radius: 50%;
     position: absolute;
     transition-timing-function: ease-out;
-    animation: cursorAnim 1s infinite alternate;
     pointer-events: none;
     z-index: 1030;
 }
-
-
-@keyframes cursorAnim {
-    from {
-        transform: scale(1);
-    }
-    to {
-        transform: scale(.8);
-    }
-}
-
 
 @keyframes cursorClick {
     0% {
@@ -45,4 +33,8 @@ a:hover {
 .expand {
     animation: cursorClick .3s forwards;
     background: rgba(8, 140 , 220, 10);
+}
+
+.hover {
+    background: rgba(0, 0 , 0, 100);
 }
