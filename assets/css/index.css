@@ -1,6 +1,10 @@
 /*---------------------
     Navbar Section
 -------------------- */
+.navbar {
+    padding-right: 20px;
+    padding-left: 20px;
+}
 .navbar a {
     color: black;
     text-decoration: none;
@@ -12,6 +16,21 @@
     max-width: 150px;
 }
 
+@media (max-width: 768px) {
+    .navbar {
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+
+    .navbar .logo{
+        max-width: 80px;
+    }
+
+    .navbar a {
+      font-size: 1.5rem;
+    }
+}
+
 /*---------------------
     Hero Section
 -------------------- */
@@ -20,23 +39,97 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-top: 0;
 }
 
 .hero .hero-title {
     font-weight: bold;
-    font-size: 7rem;
+    font-size: 5rem;
 }
 
 .hero .hero-title span {
     text-decoration: underline;
 }
 
-@media (max-width: 768px) {
-    .hero .hero-title {
-      font-size: 3rem;
-      letter-spacing: -2px;
+.scroll-animation {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+.indicator-text {
+    color: #247bd3;
+    margin-bottom: 0;
+}
+
+.indicator {
+    width: 30px; 
+    height: 45px;
+    border: 2px solid #247bd3;
+    border-radius: 50px; 
+    position: absolute;
+    bottom: 80px;
+    left: 49.5%;
+}
+
+.indicator:before {
+    content: ""; 
+    position: absolute;
+    width: 20px; 
+    height: 20px;
+    background: #247bd3; 
+    margin: auto;
+    left: 0; 
+    right: 0;
+    border-radius: 50%;
+    animation: animate 1s linear infinite; 
+}
+
+@keyframes animate {
+    0% {
+        opacity: 1; top: 0px;
+    }
+    100% {
+        opacity: 0; top: 45px;
+        transform: scale(0.8);
     }
 }
+
+@media (max-width: 768px) {
+    .hero .hero-title {
+      font-size: 2rem;
+      letter-spacing: -2px;
+    }
+
+    .hero .title-container {
+        text-align: center;
+    }
+
+    .hero .img-container {
+        display: none;
+    }
+
+    .indicator {
+        bottom: 120px;
+    }
+
+    .indicator-text {
+        display: none;
+    }
+
+    body {
+        box-shadow: inset 0 0 0 1000px rgba(255,255,255,.8);
+        background-image: url('../img/blockchain.png');
+        background-position: 0px 200px;
+        background-repeat: repeat-x;
+    }
+
+
+}
+
 
 @media (max-height: 500px) {
     .hero {
@@ -49,60 +142,161 @@
 -------------------- */
 .lastproject .media-container {
     overflow: hidden;
-    height: 700px;
     width: 100%;
     margin-bottom: 30px;
 }
 
-.lastproject .media-container video{
-    width: auto;
-    height: 100%;
+.lastproject .media-container iframe{
+    height: 500px;
+    width: 69%;
     position: relative;
     top: 0;
     right: 0;
 }
 
 /*---------------------
-    Products Section
+    Projects Section
 -------------------- */
-.products .media-container {
-    margin: 30px;
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
-.products .media-container img {
+.projects .projects-card {
+    border-radius: 30px;
+    background-color: #e6f7ff;
+    padding: 40px;
+    margin-bottom: 100px;
+}
+
+.projects .project {
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.projects .project-content{
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    background-color: #247bd3;
+    color: white;
+    border-radius: 15px;
+    padding: 30px;
+    max-width: 100%;
+    margin: auto;
+}
+
+.projects .project-icon {
+    max-width: 150px;
+    height: auto;
+    margin-right: 30px;
+    border-color: #fff;
+}
+
+.projects .col1, .projects .col2 {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.projects .project-title{
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+.projects .project-description{
+    font-weight: 300;
+}
+
+@media (min-width: 56.25rem) {
+    .projects .col-sm-auto {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .projects .project-content {
+        text-align: center;
+    }
+
+    .projects .project-content .col-sm-auto:not(:last-child) {
+        margin-bottom: 30px;
+    }
+
+    .projects .btn {
+        margin: 0 5px 10px;
+    }
+
+    .projects .project-icon {
+        margin-right: 0;
+    }
+}
+
+/*---------------------
+Highlight Section
+-------------------- */
+
+.highlight {
+    padding: 100px 0;
+    background-color: #e6f7ff;
+    border-radius: 50px 50px 0px 0px;
+}
+
+/*---------------------
+    About Section
+-------------------- */
+
+.about {
+    margin-top: -30px;
+    height: 100vh;
+    padding-top: 200px;
+    padding-bottom: 300px;
+    background-color: #247bd3;
+    color: white;
+    border-radius: 50px 50px 0px 0px;
+}
+
+.about .circular-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: auto;
+    margin-bottom: 40px;
+    filter: drop-shadow(16px 16px 20px black)
+}
+
+.about img {
     width: 100%;
 }
 
-.products .media-container img:hover{
-    filter: brightness(1.15);
-    transition: 0.5s;
+@media (max-width: 768px) {
+    .about {
+        height: 110vh;
+    }
 }
 
-.project-link .project-link-text {
-    visibility: hidden;
-    padding: 0.25em 0.5em;
-    background-color: black;
-    color: #fff;
-    text-align: center;
-    border-radius: 0.25em;
-    white-space: nowrap;
-    
-    /* Position the tooltip */
-    position: relative;
-    z-index: 1;
-    transition-property: visibility;
-    transition-delay: 0s;
-  }
-  
-  .project-link:hover .project-link-text {
-    visibility: visible;
-    transition-delay: 0.3s;
-  }
+/*---------------------
+    Contact Section
+-------------------- */
+.contact .socials {
+    text-align: right;    
+}
+
+@media (max-width: 768px) {
+    .contact, .contact .socials {
+        text-align: center;
+    }
+}
 
 /*---------------------
-    Clients Section
+    Footer Section
 -------------------- */
-.clients {
-    margin-top: 300px;
-    margin-bottom: 300px;
+.footer {
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: smaller;
 }

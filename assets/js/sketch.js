@@ -1,13 +1,18 @@
 function setup() {
   canvas = createCanvas(windowWidth, windowHeight);
-  canvas.position(0, 0);
-  canvas.style('z-index', '-1');
   rectMode(CENTER);
+  canvas.style('z-index', '-1');
+  if (windowWidth > 768) {
+    canvas.position(230, 0);
+  }
+  else {
+    canvas.position(0, -900);
+  }
 }
 
 let angle1 = 0;
 let angle2 = 0;
-let scalar = 70;
+let scalar = 40;
 
 
 function draw() {
@@ -22,7 +27,8 @@ function draw() {
   let y1 = height / 2 + scalar * sin(ang1);
   let y2 = height / 2 + scalar * sin(ang2);
 
-  fill(8,140,220);
+  fill(8, 140, 220, 0);
+  noStroke()
   rect(width * 0.5, height * 0.5, 140, 140);
 
   fill(0, 102, 153);
