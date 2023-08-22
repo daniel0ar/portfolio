@@ -276,6 +276,7 @@ Highlight Section
 @media (max-width: 768px) {
     .about {
         height: 110vh;
+        padding-top: 100px;
     }
 }
 
