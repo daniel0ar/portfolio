@@ -1,3 +1,7 @@
+/**
+ * Initiate AOS
+ */
+
 $(window).on('load', function () {
     aos_init()
 });
@@ -8,3 +12,10 @@ function aos_init() {
         once: true
     });
 }
+
+/**
+ * Initiate glightbox
+ */
+const glightbox = GLightbox({
+    selector: '.glightbox'
+});

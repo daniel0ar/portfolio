@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/vendor/aos/aos.css">
     <link rel="stylesheet" href="assets/vendor/boxicons/css/boxicons.min.css">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/layout.css">
     <link rel="stylesheet" href="assets/css/index.css">
     <link rel="stylesheet" href="assets/css/cursor.css">
@@ -31,7 +32,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6 col-sm-auto title-container">
-                        <h1 class="hero-title">Your web3 / blockchain projects done <span>the right way</span></h1>
+                        <h1 class="hero-title">I build web apps with <span>UX and blockchain</span></h1>
                     </div>
                     <div class="col-lg-6 col-sm-auto img-container">
                         <img src="assets/img/blockchain.png" alt="" class="img">
@@ -47,13 +48,13 @@
         <section class="lastproject" data-aos="fade-up" data-aos-duration="2600">
             <div class="container text-center">
                 <h2 class="section-title">Latest Project</h2>
-                <h3 class="section-text-m subtitle">Chainlink Hackathon 2023: Meent, web3 tickets for web2 event organizers</h3>
+                <h3 class="section-text-m subtitle">MunayFund: A novel fund dsitribution tool for the Allo (Gitcoin) grants</h3>
                 <div class="buttons">
-                    <a class="btn btn-primary" href="https://devpost.com/software/eventmint" target="_blank">view</a>
+                    <a class="btn btn-primary" href="https://munayfund.vercel.app/" target="_blank">view</a>
                     <a class="btn btn-primary" href="https://github.com/ManuelLecaro/Meent" target="_blank"><i class='bx bxl-github bx-fw'></i>code</a>
                 </div>
                 <div class="media-container">
-                    <iframe src="https://www.youtube.com/embed/dqoTpwZKC7A?controls=0" title="YouTube video player"
+                    <iframe src="https://www.youtube.com/embed/r74bEFFSHxo?si=op4Fv0fSgtBjXD8K" title="YouTube video player"
                         frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         allowfullscreen></iframe>
@@ -63,7 +64,146 @@
             </div>
         </section>
 
-        <section class="projects" data-aos="fade-up">
+        <!-- Blockchain Projects Section - Home Page -->
+        <section id="blockchain-projects" class="blockchain-projects">
+
+            <div class="container" data-aos="fade-up" data-aos-delay="100">
+            <div class="row align-items-xl-center gy-5">
+    
+                <div class="col-xl-5 content">
+                <h3>Portfolio</h3>
+                <h2>My blockchain projects</h2>
+                <p>Web apps with smart contracts in the Defi and NFT space with Solidity, Infura, IPFS, React, Next and web3 libraries like wagmi, ethers, rainbowkit, web3js, hardhat and truffle </p>
+                <a href="https://learnweb3.io/u/daniel0ar/" target="_blank" class="read-more"><span>Degrees and Badges</span><i class="bx bx-right-arrow-alt"></i></a>
+                </div>
+    
+                <div class="col-xl-7">
+                <div class="row gy-4 icon-boxes">
+    
+                    <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="portfolio-item">
+                        <img src="assets/img/products/meent.png" class="img-fluid" alt="">
+                        <div class="portfolio-info">
+                            <h4>Meent, NFT event tickets</h4>
+                            <p>A web2 component that connects to web3 to mint event tickets as NFTs</p>
+                            <a href="https://www.youtube.com/watch?v=dqoTpwZKC7A" target="_blank" class="preview-link"><i class="bx bx-play-circle"></i></a>
+                            <a href="https://github.com/ManuelLecaro/Meent" title="Code" class="details-link"><i class="bx bx-link"></i></a>
+                        </div>
+                    </div>
+                    </div> <!-- End Portfolio Item -->
+    
+                    <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
+                        <div class="portfolio-item">
+                        <img src="assets/img/products/products-1.png" class="img-fluid" alt="">
+                        <div class="portfolio-info">
+                            <h4>NotKickstarter</h4>
+                            <p>A scam-proof project funding platform (solves Kickstarter's fraud issues)</p>
+                            <a href="/projects/notkickstarter/index.html" title="App 1" class="preview-link"><i class="bx bx-play-circle"></i></a>
+                            <a href="https://github.com/daniel0ar/NotKickstarter-DApp" title="More Details" class="details-link"><i class="bx bx-link"></i></a>
+                        </div>
+                        </div>
+                    </div> <!-- End Portfolio Item -->
+    
+                    <div class="col-md-6" data-aos="fade-up" data-aos-delay="400">
+                        <div class="portfolio-item">
+                        <img src="assets/img/products/multisign.png" class="img-fluid" alt="">
+                        <div class="portfolio-info">
+                            <h4>Multisign Wallet</h4>
+                            <p>An account abstraction Ethereum wallet with multiple signature validation</p>
+                            <a href="assets/img/products/multisign.png" title="App 1" class="preview-link"><i class="bx bx-play-circle"></i></a>
+                            <a href="https://github.com/daniel0ar/multisig-scw" title="More Details" class="details-link"><i class="bx bx-link"></i></a>
+                        </div>
+                        </div>
+                    </div> <!-- End Portfolio Item -->
+    
+                    <div class="col-md-6" data-aos="fade-up" data-aos-delay="500">
+                        <div class="portfolio-item">
+                        <img src="assets/img/products/tokenized-nft.jpeg" class="img-fluid" alt="">
+                        <div class="portfolio-info">
+                            <h4>Fractionalized NFT</h4>
+                            <p>A smart contract suite to mint ERC20 tokens into fractions</p>
+                            <a href="https://github.com/daniel0ar/RedenGoldProject-Contracts" title="App 1" class="preview-link"><i class="bx bx-play-circle"></i></a>
+                            <a href="https://github.com/daniel0ar/RedenGoldProject-Contracts" title="More Details" class="details-link"><i class="bx bx-code"></i></a>
+                        </div>
+                        </div>
+                    </div> <!-- End Portfolio Item -->
+    
+                </div>
+                </div>
+    
+            </div>
+            </div>
+    
+        </section><!-- End Blockchain Projects Section -->
+
+        <!-- Blockchain Projects Section - Home Page -->
+        <section id="blockchain-projects" class="blockchain-projects">
+
+            <div class="container" data-aos="fade-up" data-aos-delay="100">
+            <div class="row align-items-xl-center gy-5">
+
+                <div class="col-xl-7">
+                    <div class="row gy-4 icon-boxes">
+        
+                        <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+                        <div class="portfolio-item">
+                            <img src="assets/img/products/materials-erp.png" class="img-fluid" alt="">
+                            <div class="portfolio-info">
+                                <h4>Materials ERP</h4>
+                                <p>A complete inventory management system built with React, Node and PostgreSQL</p>
+                            </div>
+                        </div>
+                        </div> <!-- End Portfolio Item -->
+        
+                        <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
+                            <div class="portfolio-item">
+                            <img src="assets/img/products/d3-properties.png" class="img-fluid" alt="">
+                            <div class="portfolio-info">
+                                <h4>D3 Properties</h4>
+                                <p>An fully functinal Airbnb clone on NextJs, Tailwind, Zustand and Amplication</p>
+                                <a href="https://github.com/daniel0ar/NotKickstarter-DApp" title="More Details" class="details-link"><i class="bx bx-link"></i></a>
+                            </div>
+                            </div>
+                        </div> <!-- End Portfolio Item -->
+        
+                        <div class="col-md-6" data-aos="fade-up" data-aos-delay="400">
+                            <div class="portfolio-item">
+                            <img src="assets/img/products/innomaps.png" class="img-fluid" alt="">
+                            <div class="portfolio-info">
+                                <h4>Innomaps</h4>
+                                <p>A seller-tracking mobile web app on React (team member)</p>
+                            </div>
+                            </div>
+                        </div> <!-- End Portfolio Item -->
+        
+                        <div class="col-md-6" data-aos="fade-up" data-aos-delay="500">
+                            <div class="portfolio-item">
+                            <img src="assets/img/products/icp-hub.png" class="img-fluid" alt="">
+                            <div class="portfolio-info">
+                                <h4>ICP Community Hub</h4>
+                                <p>A community platform where users learn and teach the Internet Computer</p>
+                                <a href="https://ly65v-2yaaa-aaaan-qluwa-cai.icp0.io/" title="App 1" class="preview-link"><i class="bx bx-play-circle"></i></a>
+                                <a href="https://github.com/daniel0ar/ICP-Community-Hub" title="More Details" class="details-link"><i class="bx bx-code"></i></a>
+                            </div>
+                            </div>
+                        </div> <!-- End Portfolio Item -->
+        
+                    </div>
+                    </div>
+    
+                <div class="col-xl-5 content">
+                <h3>Portfolio</h3>
+                <h2>My enterprise projects</h2>
+                <p>Web Applications designed, tested and deployed with tools like React, NextJs, Tailwind, Javascript, Typescript, Node, Express and some libraries like Zustand, Redux, ChaiHttp and Mocha</p>
+                <a href="https://www.udemy.com/user/daniel-arroyo-46/" target="_blank" class="read-more"><span>My Courses</span><i class="bx bx-right-arrow-alt"></i></a>
+                </div>
+    
+            </div>
+            </div>
+    
+        </section><!-- End Blockchain Projects Section -->
+
+        <!--section class="projects" data-aos="fade-up">
             <div class="container projects-card">
                 <h2 class="section-title">Projects</h2>
                 <div class="project">
@@ -117,7 +257,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section-->
 
         <section class="highlight">
             <div class="container text-center">
@@ -189,6 +329,8 @@
     <script src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/vendor/p5/p5.min.js"></script>
     <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
     <script src="assets/js/main.js"></script>
     <script src="assets/js/sketch.js"></script>
     <script src="assets/js/cursor.js"></script>
