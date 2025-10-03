@@ -102,6 +102,10 @@ section .media-container{
     font-weight: 500;
 }
 
+.btn-cta {
+    font-weight: 500;
+}
+
 @media (max-width: 768px) {
     section .section-text-l {
         font-size: 2rem;
