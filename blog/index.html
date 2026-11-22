@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Articles about building crypto apps, web3 and user experience - Dani3">
-    <title>Blog - Dani3</title>
+    <script src="../assets/js/i18n.js"></script>
+    <meta name="description" content="Articles about crypto, privacy and philosophy - Dani3" data-i18n-attr="content:blog.description">
+    <title data-i18n="blog.title">Blog - Dani3</title>
     <link rel="icon" href="/favicon.ico">
     <link rel="stylesheet" href="../assets/vendor/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="../assets/css/layout.css">
@@ -25,13 +26,19 @@
         <a href="/" class="navbar-brand">
             <img src="../assets/img/patacon_dani.jpeg" alt="logo" class="logo">
         </a>
-        <a href="/blog/">Blog</a>
+        <div class="nav-actions">
+            <div class="lang-switch" role="group" aria-label="Language" data-i18n-attr="aria-label:common.languageLabel">
+                <button type="button" data-set-lang="en" lang="en" aria-label="English">EN</button>
+                <button type="button" data-set-lang="es" lang="es" aria-label="Español">ES</button>
+            </div>
+            <a href="./index.html">Blog</a>
+        </div>
     </div>
 
     <section class="blog-header">
         <div class="blog-container">
             <h1 class="blog-title">Blog</h1>
-            <p class="section-text-m">Notas y reflexiones sobre cripto, privacidad y filosofía.</p>
+            <p class="section-text-m" data-i18n="blog.intro">Notes and reflections on crypto, privacy and philosophy.</p>
         </div>
     </section>
 
@@ -41,17 +48,17 @@
             <ul class="post-list">
                 <li>
                     <a class="post-link" href="./los-juegos-del-hambre/index.html">
-                        <p class="post-meta"><time datetime="2026-11-20">Nov 20, 2026</time> · 3 minutoss</p>
-                        <h2 class="post-title">Los Juegos del Hambre y la Privacidad</h2>
-                        <p class="post-excerpt">¿Daniel es paranoico o realmente necesitamos más privacidad?</p>
+                        <p class="post-meta" data-i18n="blog.hungerGames.meta"><time datetime="2026-11-20">Nov 20, 2026</time> · 3 minutes</p>
+                        <h2 class="post-title" data-i18n="blog.hungerGames.title">The Hunger Games and Privacy</h2>
+                        <p class="post-excerpt" data-i18n="blog.hungerGames.excerpt">Is Daniel paranoid, or do we really need more privacy?</p>
                     </a>
                 </li>
             </ul>
         </div>
     </section>
 
-    <section class="footer">
-        Sitio diseñado y construido por mí.
+    <section class="footer" data-i18n="common.footer">
+        Site designed and built by me.
     </section>
 
     <script src="../assets/js/cursor.js"></script>

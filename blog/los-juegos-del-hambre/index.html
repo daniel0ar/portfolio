@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="A short intro to what I'll be writing about: crypto UX, shipping fast, and lessons from real-world web3 products.">
-    <title>Hello world: why I'm starting a blog - Dani3</title>
+    <script src="../../assets/js/i18n.js"></script>
+    <meta name="description" content="Is Daniel paranoid, or do we really need more privacy?" data-i18n-attr="content:blog.hungerGames.excerpt">
+    <title data-i18n="post.hungerGames.pageTitle">The Hunger Games and Privacy - Dani3</title>
     <link rel="icon" href="/favicon.ico">
     <link rel="stylesheet" href="../../assets/vendor/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="../../assets/css/layout.css">
@@ -25,10 +26,54 @@
         <a href="/" class="navbar-brand">
             <img src="../../assets/img/patacon_dani.jpeg" alt="logo" class="logo">
         </a>
-        <a href="../index.html">Blog</a>
+        <div class="nav-actions">
+            <div class="lang-switch" role="group" aria-label="Language" data-i18n-attr="aria-label:common.languageLabel">
+                <button type="button" data-set-lang="en" lang="en" aria-label="English">EN</button>
+                <button type="button" data-set-lang="es" lang="es" aria-label="Español">ES</button>
+            </div>
+            <a href="../index.html">Blog</a>
+        </div>
     </div>
 
-    <article>
+    <article data-lang="en" lang="en">
+        <header class="article-header">
+            <div class="blog-container">
+                <a class="back-link" href="../index.html">&larr; All articles</a>
+                <p class="post-meta"><time datetime="2026-11-20">Nov 20, 2026</time> · 2 minutes</p>
+                <h1>The Hunger Games and Privacy</h1>
+                <p class="section-text-m">Is Daniel paranoid, or do we really need more privacy?</p>
+            </div>
+        </header>
+
+        <div class="article-body">
+            <div class="blog-container">
+                <p>Today I watched The Hunger Games, and I went somewhat reluctantly because I wanted to keep working (a side effect of how fast it is to work with AI).</p>
+                <p>In the movie, Snow says a line that scared me: "Do you think you know something I can't find out?" It carries a lot of fear and authority over the protagonist, who of course has information they want to protect in order to keep their loved ones and themselves safe.</p>
+                <p>It makes me think this is practically what we live through today. The difference is that nobody says it to our face, but constant surveillance across every digital and physical medium has become normal: video cameras on every corner, telemetry on our phones, secrets we tell ChatGPT, and ads that appear as soon as we think of something.</p>
+                <p>We must understand that, just like with Snow, whoever knows everything about us has all the power over us, and we lose our agency as individuals. Our thoughts and actions all become "not ours," and instead we are easily manipulated.</p>
+                <p>And for those who think "I have nothing to hide, I haven't done anything wrong": privacy is a right, and selectively revealing ourselves to other people must always remain entirely under our control.</p>
+                <p>Being constantly watched has put all of us in the crosshairs as suspects, instead of keeping us safe.</p>
+                <h2>What can we do?</h2>
+                <p>If you're reading this, it's never too late to start using <strong>private, local or paid apps</strong>. Remember that with free apps, you are the product. Your data is very valuable, so don't hand it over lightly.</p>
+                <p>Here is a list of some of them:</p>
+                <ul>
+                    <li>Messaging: Signal</li>
+                    <li>VPN: NymVPN / Orbot</li>
+                    <li>Computer operating system: Linux</li>
+                    <li>Payments: Ruma (ruma.live)</li>
+                    <li>Social media: None (it's hard, but it's the best option)</li>
+                </ul>
+
+                <blockquote>"The games are a machine, and every machine can break."</blockquote>
+
+                <hr>
+
+                <p>Thanks for reading, see you next time.</p>
+            </div>
+        </div>
+    </article>
+
+    <article data-lang="es" lang="es">
         <header class="article-header">
             <div class="blog-container">
                 <a class="back-link" href="../index.html">&larr; Todos los artículos</a>
@@ -67,11 +112,11 @@
     </article>
 
     <div class="article-footer">
-        <a class="btn btn-bw" href="../index.html">&larr; Atrás</a>
+        <a class="btn btn-bw" href="../index.html" data-i18n="post.back">&larr; Back</a>
     </div>
 
-    <section class="footer">
-        Sitio diseñado y construido por mí.
+    <section class="footer" data-i18n="common.footer">
+        Site designed and built by me.
     </section>
 
     <script src="../../assets/js/cursor.js"></script>

@@ -1,0 +1,163 @@
+/**
+ * Language selection (English / Spanish).
+ *
+ * - English lives in the HTML. Spanish lives in the `es` dictionary below.
+ * - Mark text with data-i18n="key", attributes with data-i18n-attr="title:key;alt:key".
+ * - Long content (articles) can use two blocks: data-lang="en" and data-lang="es".
+ *
+ * Load this in <head>, without defer, so the language is set before first paint.
+ */
+(function () {
+    var SUPPORTED = ['en', 'es'];
+    var DEFAULT_LANG = 'en';
+    var STORAGE_KEY = 'lang';
+
+    var es = {
+        // Shared
+        'common.footer': 'Sitio diseñado y construido por mí.',
+        'common.view': 'ver',
+        'common.code': 'código',
+        'common.codeTitle': 'Código',
+        'common.moreDetails': 'Más detalles',
+        'common.languageLabel': 'Idioma',
+
+        // Homepage
+        'home.title': 'Proyectos de desarrollador cripto y blockchain desde Ecuador - Dani3',
+        'home.hero': 'Construyo apps cripto para el mundo real con <span>excelente experiencia de usuario</span>',
+        'home.scroll': 'Mira mi trabajo',
+        'home.latest': 'Último trabajo',
+        'home.ruma': 'Ruma: La billetera de LATAM. Pagos transfronterizos anónimos en FIAT.',
+        'home.portfolio': 'Portafolio',
+        'home.crypto.title': 'Mis proyectos cripto',
+        'home.crypto.text': 'Aplicaciones web con contratos inteligentes en el espacio DeFi y NFT con Solidity, IPFS, React, Next y librerías como wagmi, viem, rainbowkit y hardhat. También apps privadas con ZK, circom, Noir.',
+        'home.crypto.link': 'Títulos e insignias',
+        'home.bubblefi': 'Un exchange descentralizado gamificado en la red Monad basado en Uniswap v2',
+        'home.notkickstarter': 'Una plataforma de financiamiento de proyectos a prueba de estafas (resuelve los problemas de fraude de Kickstarter)',
+        'home.prooflocation': 'Un widget de prueba de ubicación de conocimiento cero con un contrato inteligente verificador',
+        'home.fractional': 'Una suite de contratos inteligentes para convertir tokens ERC721 en fracciones ERC20',
+        'home.enterprise.title': 'Mis proyectos empresariales',
+        'home.enterprise.text': 'Aplicaciones web diseñadas, probadas y desplegadas con herramientas como React, NextJs, Tailwind, Javascript, Typescript, Node, Express y librerías como Zustand, Redux, ChaiHttp y Mocha',
+        'home.enterprise.link': 'Mis cursos',
+        'home.erp': 'Un sistema completo de gestión de inventario construido con React, Node y PostgreSQL',
+        'home.d3': 'Un clon de Airbnb totalmente funcional con NextJs, Tailwind, Zustand y Amplication',
+        'home.innomaps': 'Una app web móvil de seguimiento de vendedores en React (miembro del equipo)',
+        'home.icp': 'Una plataforma comunitaria donde los usuarios aprenden y enseñan sobre Internet Computer',
+        'home.highlight': 'Destacados',
+        'home.idriss': 'IDRISS Creators V2: App de monetización para creadores sobre rieles cripto',
+        'home.weai': 'WeAI: Detección de robots sin Internet, con beacons Bluetooth BLE',
+        'home.tryLive': 'Pruébalo en vivo',
+        'home.patacon': 'Patacon Friends: Primera colección NFT ecuatoriana, en la mainnet de Polygon',
+        'home.meAlt': 'yo',
+        'home.about1': 'Soy excelente creando aplicaciones descentralizadas, fáciles de usar, limpias y mantenibles.',
+        'home.about2': 'He trabajado en ► startups cripto, negocios locales y equipos remotos globales en Ethereum, Polygon, Monad, Base, Solana y más.',
+        'home.cv': '¡Mira mi CV!',
+        'home.download': 'Descargar',
+        'home.contact': '¡Contáctame para proyectos o contrátame!',
+        'home.navAbout': 'Sobre mí',
+        'home.navContact': 'Contacto',
+
+        // Blog
+        'blog.title': 'Blog - Dani3',
+        'blog.description': 'Artículos sobre cripto, privacidad y filosofía - Dani3',
+        'blog.intro': 'Notas y reflexiones sobre cripto, privacidad y filosofía.',
+        'blog.hungerGames.meta': '<time datetime="2026-11-20">20 nov 2026</time> · 3 minutos',
+        'blog.hungerGames.title': 'Los Juegos del Hambre y la Privacidad',
+        'blog.hungerGames.excerpt': '¿Daniel es paranoico o realmente necesitamos más privacidad?',
+        'post.hungerGames.pageTitle': 'Los Juegos del Hambre y la Privacidad - Dani3',
+        'post.back': '&larr; Atrás'
+    };
+
+    var root = document.documentElement;
+
+    function isSupported(lang) {
+        return SUPPORTED.indexOf(lang) !== -1;
+    }
+
+    function getStoredLang() {
+        try {
+            var lang = localStorage.getItem(STORAGE_KEY);
+            return isSupported(lang) ? lang : null;
+        } catch (e) {
+            return null;
+        }
+    }
+
+    function storeLang(lang) {
+        try {
+            localStorage.setItem(STORAGE_KEY, lang);
+        } catch (e) {
+            // Storage can be blocked. The choice still applies to this page.
+        }
+    }
+
+    function detectLang() {
+        var preferred = navigator.languages && navigator.languages.length
+            ? navigator.languages
+            : [navigator.language || ''];
+
+        for (var i = 0; i < preferred.length; i++) {
+            var base = String(preferred[i]).toLowerCase().split('-')[0];
+            if (isSupported(base)) return base;
+        }
+        return DEFAULT_LANG;
+    }
+
+    function translateText(el, lang) {
+        if (el._i18nSource === undefined) el._i18nSource = el.innerHTML;
+        var key = el.getAttribute('data-i18n');
+        el.innerHTML = lang === 'es' && es[key] !== undefined ? es[key] : el._i18nSource;
+    }
+
+    function translateAttrs(el, lang) {
+        if (!el._i18nAttrs) el._i18nAttrs = {};
+
+        el.getAttribute('data-i18n-attr').split(';').forEach(function (pair) {
+            var parts = pair.split(':');
+            var attr = parts[0].trim();
+            var key = parts[1].trim();
+
+            if (el._i18nAttrs[attr] === undefined) el._i18nAttrs[attr] = el.getAttribute(attr);
+            el.setAttribute(attr, lang === 'es' && es[key] !== undefined ? es[key] : el._i18nAttrs[attr]);
+        });
+    }
+
+    function applyLang(lang) {
+        root.setAttribute('lang', lang);
+
+        document.querySelectorAll('[data-i18n]').forEach(function (el) {
+            translateText(el, lang);
+        });
+        document.querySelectorAll('[data-i18n-attr]').forEach(function (el) {
+            translateAttrs(el, lang);
+        });
+        document.querySelectorAll('[data-set-lang]').forEach(function (button) {
+            button.setAttribute('aria-pressed', String(button.getAttribute('data-set-lang') === lang));
+        });
+
+        root.classList.remove('i18n-pending');
+        if (window.AOS) window.AOS.refresh();
+    }
+
+    var initialLang = getStoredLang() || detectLang();
+    root.setAttribute('lang', initialLang);
+
+    // Avoid a flash of English while Spanish strings are applied.
+    if (initialLang === 'es') root.classList.add('i18n-pending');
+
+    document.addEventListener('DOMContentLoaded', function () {
+        applyLang(initialLang);
+
+        document.querySelectorAll('[data-set-lang]').forEach(function (button) {
+            button.addEventListener('click', function () {
+                var lang = button.getAttribute('data-set-lang');
+                storeLang(lang);
+                applyLang(lang);
+            });
+        });
+    });
+
+    // Pages restored by the back button should reflect a newer choice.
+    window.addEventListener('pageshow', function (event) {
+        if (event.persisted) applyLang(getStoredLang() || detectLang());
+    });
+})();

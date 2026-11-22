@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="assets/js/i18n.js"></script>
     <meta name="keywords" content="blockchain, crypto, web3, developer, desarrollador">
-    <title>Crypto blockchain developer projects from Ecuador - Dani3</title>
+    <title data-i18n="home.title">Crypto blockchain developer projects from Ecuador - Dani3</title>
     <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/vendor/aos/aos.css">
     <link rel="stylesheet" href="assets/vendor/boxicons/css/boxicons.min.css">
@@ -26,30 +27,36 @@
             <a href="#" class="navbar-brand">
                 <img src="assets/img/patacon_dani.jpeg" alt="logo" class="logo">
             </a>
-            <a href="./blog/index.html">Blog</a>
+            <div class="nav-actions">
+                <div class="lang-switch" role="group" aria-label="Language" data-i18n-attr="aria-label:common.languageLabel">
+                    <button type="button" data-set-lang="en" lang="en" aria-label="English">EN</button>
+                    <button type="button" data-set-lang="es" lang="es" aria-label="Español">ES</button>
+                </div>
+                <a href="./blog/index.html">Blog</a>
+            </div>
         </div>
 
         <section class="hero">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12 col-sm-auto title-container text-center">
-                        <h1 class="hero-title">I build real-world crypto apps with <span>great user experience</span></h1>
+                        <h1 class="hero-title" data-i18n="home.hero">I build real-world crypto apps with <span>great user experience</span></h1>
                     </div>
                 </div>
             </div>
             <div class="scroll-animation">
                 <div class="indicator"></div>
-                <p class="indicator-text">Check my work</p>
+                <p class="indicator-text" data-i18n="home.scroll">Check my work</p>
             </div>
         </section>
 
         <section class="lastproject" data-aos="fade-up" data-aos-duration="2600">
             <div class="container text-center">
-                <h2 class="section-title">Latest Work</h2>
-                <h3 class="section-text-m subtitle">Ruma: Borderless Payments for LATAM</h3>
+                <h2 class="section-title" data-i18n="home.latest">Latest Work</h2>
+                <h3 class="section-text-m subtitle" data-i18n="home.ruma">Ruma: Borderless Payments for LATAM</h3>
                 <div class="buttons">
-                    <a class="btn btn-primary" href="https://app.ruma.live" target="_blank">view</a>
-                    <a class="btn btn-primary" href="https://github.com/RumaCrypto/pwa" target="_blank"><i class='bx bxl-github bx-fw'></i>code</a>
+                    <a class="btn btn-primary" href="https://app.ruma.live" target="_blank" data-i18n="common.view">view</a>
+                    <a class="btn btn-primary" href="https://github.com/RumaCrypto/pwa" target="_blank"><i class='bx bxl-github bx-fw'></i><span data-i18n="common.code">code</span></a>
                 </div>
                 <video autoplay muted loop playsinline>
                     <source src="assets/video/ruma-40s-9x16-es.mp4" type="video/mp4" media="(max-width: 768px)">
@@ -65,10 +72,10 @@
             <div class="row align-items-xl-center gy-5">
 
                 <div class="col-xl-5 content">
-                <h3>Portfolio</h3>
-                <h2>My crypto projects</h2>
-                <p>Web apps with smart contracts in the Defi and NFT space with Solidity, Infura, IPFS, React, Next and web3 libraries like wagmi, viem, rainbowkit, hardhat and truffle </p>
-                <a href="https://learnweb3.io/u/daniel0ar/" target="_blank" class="read-more"><span>Degrees and Badges</span><i class="bx bx-right-arrow-alt"></i></a>
+                <h3 data-i18n="home.portfolio">Portfolio</h3>
+                <h2 data-i18n="home.crypto.title">My crypto projects</h2>
+                <p data-i18n="home.crypto.text">Web apps with smart contracts in the Defi and NFT space with Solidity, Infura, IPFS, React, Next and web3 libraries like wagmi, viem, rainbowkit, hardhat and truffle </p>
+                <a href="https://learnweb3.io/u/daniel0ar/" target="_blank" class="read-more"><span data-i18n="home.crypto.link">Degrees and Badges</span><i class="bx bx-right-arrow-alt"></i></a>
                 </div>
 
                 <div class="col-xl-7">
@@ -79,9 +86,9 @@
                         <img src="assets/img/products/bubblefi.png" class="img-fluid" alt="">
                         <div class="portfolio-info">
                             <h4>BubbleFi</h4>
-                            <p>A gamified decentralized exchange on the Monad network based on Uniswap v2</p>
+                            <p data-i18n="home.bubblefi">A gamified decentralized exchange on the Monad network based on Uniswap v2</p>
                             <a href="https://x.com/bubblefi_xyz" target="_blank" class="preview-link"><i class="bx bx-play-circle"></i></a>
-                            <a href="https://github.com/Bubble-Finance/" title="Code" class="details-link"><i class="bx bx-code"></i></a>
+                            <a href="https://github.com/Bubble-Finance/" title="Code" data-i18n-attr="title:common.codeTitle" class="details-link"><i class="bx bx-code"></i></a>
                         </div>
                     </div>
                     </div> <!-- End Portfolio Item -->
@@ -91,9 +98,9 @@
                         <img src="assets/img/products/products-1.png" class="img-fluid" alt="">
                         <div class="portfolio-info">
                             <h4>NotKickstarter</h4>
-                            <p>A scam-proof project funding platform (solves Kickstarter's fraud issues)</p>
+                            <p data-i18n="home.notkickstarter">A scam-proof project funding platform (solves Kickstarter's fraud issues)</p>
                             <a href="/projects/notkickstarter/index.html" title="App 1" class="preview-link"><i class="bx bx-play-circle"></i></a>
-                            <a href="https://github.com/daniel0ar/NotKickstarter-DApp" title="Code" class="details-link"><i class="bx bx-code"></i></a>
+                            <a href="https://github.com/daniel0ar/NotKickstarter-DApp" title="Code" data-i18n-attr="title:common.codeTitle" class="details-link"><i class="bx bx-code"></i></a>
                         </div>
                         </div>
                     </div> <!-- End Portfolio Item -->
@@ -103,8 +110,8 @@
                         <img src="assets/img/products/prooflocation.png" class="img-fluid" alt="">
                         <div class="portfolio-info">
                             <h4>Proof of Location</h4>
-                            <p>A zero knowledge proof of location widget with a smart contract verifier</p>
-                            <a href="https://github.com/NathaliaBarreiros/ProofLocation" title="More Details" class="details-link"><i class="bx bx-link"></i></a>
+                            <p data-i18n="home.prooflocation">A zero knowledge proof of location widget with a smart contract verifier</p>
+                            <a href="https://github.com/NathaliaBarreiros/ProofLocation" title="More Details" data-i18n-attr="title:common.moreDetails" class="details-link"><i class="bx bx-link"></i></a>
                         </div>
                         </div>
                     </div> <!-- End Portfolio Item -->
@@ -114,9 +121,9 @@
                         <img src="assets/img/products/tokenized-nft.jpeg" class="img-fluid" alt="">
                         <div class="portfolio-info">
                             <h4>Fractionalized NFT</h4>
-                            <p>A smart contract suite to mint ERC721 tokens into ERC20 fractions</p>
+                            <p data-i18n="home.fractional">A smart contract suite to mint ERC721 tokens into ERC20 fractions</p>
                             <a href="https://github.com/daniel0ar/RedenGoldProject-Contracts" title="App 1" class="preview-link"><i class="bx bx-play-circle"></i></a>
-                            <a href="https://github.com/daniel0ar/RedenGoldProject-Contracts" title="More Details" class="details-link"><i class="bx bx-code"></i></a>
+                            <a href="https://github.com/daniel0ar/RedenGoldProject-Contracts" title="More Details" data-i18n-attr="title:common.moreDetails" class="details-link"><i class="bx bx-code"></i></a>
                         </div>
                         </div>
                     </div> <!-- End Portfolio Item -->
@@ -143,7 +150,7 @@
                             <img src="assets/img/products/materials-erp.png" class="img-fluid" alt="">
                             <div class="portfolio-info">
                                 <h4>Materials ERP</h4>
-                                <p>A complete inventory management system built with React, Node and PostgreSQL</p>
+                                <p data-i18n="home.erp">A complete inventory management system built with React, Node and PostgreSQL</p>
                             </div>
                         </div>
                         </div> <!-- End Portfolio Item -->
@@ -153,8 +160,8 @@
                             <img src="assets/img/products/d3-properties.png" class="img-fluid" alt="">
                             <div class="portfolio-info">
                                 <h4>D3 Properties</h4>
-                                <p>An fully functinal Airbnb clone on NextJs, Tailwind, Zustand and Amplication</p>
-                                <a href="https://github.com/daniel0ar/NotKickstarter-DApp" title="More Details" class="details-link"><i class="bx bx-link"></i></a>
+                                <p data-i18n="home.d3">A fully functinal Airbnb clone on NextJs, Tailwind, Zustand and Amplication</p>
+                                <a href="https://github.com/daniel0ar/NotKickstarter-DApp" title="More Details" data-i18n-attr="title:common.moreDetails" class="details-link"><i class="bx bx-link"></i></a>
                             </div>
                             </div>
                         </div> <!-- End Portfolio Item -->
@@ -164,7 +171,7 @@
                             <img src="assets/img/products/innomaps.png" class="img-fluid" alt="">
                             <div class="portfolio-info">
                                 <h4>Innomaps</h4>
-                                <p>A seller-tracking mobile web app on React (team member)</p>
+                                <p data-i18n="home.innomaps">A seller-tracking mobile web app on React (team member)</p>
                             </div>
                             </div>
                         </div> <!-- End Portfolio Item -->
@@ -174,9 +181,9 @@
                             <img src="assets/img/products/icp-hub.png" class="img-fluid" alt="">
                             <div class="portfolio-info">
                                 <h4>ICP Community Hub</h4>
-                                <p>A community platform where users learn and teach the Internet Computer</p>
+                                <p data-i18n="home.icp">A community platform where users learn and teach the Internet Computer</p>
                                 <a href="https://ly65v-2yaaa-aaaan-qluwa-cai.icp0.io/" title="App 1" class="preview-link"><i class="bx bx-play-circle"></i></a>
-                                <a href="https://github.com/daniel0ar/ICP-Community-Hub" title="More Details" class="details-link"><i class="bx bx-code"></i></a>
+                                <a href="https://github.com/daniel0ar/ICP-Community-Hub" title="More Details" data-i18n-attr="title:common.moreDetails" class="details-link"><i class="bx bx-code"></i></a>
                             </div>
                             </div>
                         </div> <!-- End Portfolio Item -->
@@ -185,10 +192,10 @@
                     </div>
 
                 <div class="col-xl-5 content">
-                <h3>Portfolio</h3>
-                <h2>My enterprise projects</h2>
-                <p>Web Applications designed, tested and deployed with tools like React, NextJs, Tailwind, Javascript, Typescript, Node, Express and some libraries like Zustand, Redux, ChaiHttp and Mocha</p>
-                <a href="https://www.udemy.com/user/daniel-arroyo-46/" target="_blank" class="read-more"><span>My Courses</span><i class="bx bx-right-arrow-alt"></i></a>
+                <h3 data-i18n="home.portfolio">Portfolio</h3>
+                <h2 data-i18n="home.enterprise.title">My enterprise projects</h2>
+                <p data-i18n="home.enterprise.text">Web Applications designed, tested and deployed with tools like React, NextJs, Tailwind, Javascript, Typescript, Node, Express and some libraries like Zustand, Redux, ChaiHttp and Mocha</p>
+                <a href="https://www.udemy.com/user/daniel-arroyo-46/" target="_blank" class="read-more"><span data-i18n="home.enterprise.link">My Courses</span><i class="bx bx-right-arrow-alt"></i></a>
                 </div>
 
             </div>
@@ -198,7 +205,7 @@
 
         <section class="highlight">
             <div class="container text-center">
-                <h2 class="section-title">Highlight</h2>
+                <h2 class="section-title" data-i18n="home.highlight">Highlight</h2>
                 <div class="row gy-5">
                     <div class="col-12 col-lg-4">
                         <div class="highlight-card">
@@ -210,10 +217,10 @@
                                     </div>
                                 </div>
                             </a>
-                            <h3 class="section-text-m">IDRISS Creators V2: Creator monetization app built on crypto rails</h3>
+                            <h3 class="section-text-m" data-i18n="home.idriss">IDRISS Creators V2: Creator monetization app built on crypto rails</h3>
                             <div class="buttons">
-                                <a class="btn btn-primary" href="https://x.com/idriss_xyz" target="_blank">view</a>
-                                <a class="btn btn-primary" href="https://github.com/idriss-xyz/core" target="_blank"><i class='bx bxl-github bx-fw'></i>code</a>
+                                <a class="btn btn-primary" href="https://x.com/idriss_xyz" target="_blank" data-i18n="common.view">view</a>
+                                <a class="btn btn-primary" href="https://github.com/idriss-xyz/core" target="_blank"><i class='bx bxl-github bx-fw'></i><span data-i18n="common.code">code</span></a>
                             </div>
                         </div>
                     </div>
@@ -225,25 +232,25 @@
                                     <img src="assets/img/services/weAI.png" alt="WeAI">
                                 </div>
                             </a>
-                            <h3 class="section-text-m">WeAI: Robot detection with Bluetooth BLE</h3>
+                            <h3 class="section-text-m" data-i18n="home.weai">WeAI: Robot detection with Bluetooth BLE</h3>
                             <div class="buttons">
-                                <a class="btn btn-primary" href="https://useweai.help" target="_blank">view</a>
-                                <a class="btn btn-primary" href="https://github.com/daniel0ar/WeAI" target="_blank"><i class='bx bxl-github bx-fw'></i>code</a>
+                                <a class="btn btn-primary" href="https://useweai.help" target="_blank" data-i18n="common.view">view</a>
+                                <a class="btn btn-primary" href="https://github.com/daniel0ar/WeAI" target="_blank"><i class='bx bxl-github bx-fw'></i><span data-i18n="common.code">code</span></a>
                             </div>
                         </div>
                     </div>
                     <div class="col-12 col-lg-4">
                         <div class="highlight-card">
-                            <a title="Try it live"
+                            <a title="Try it live" data-i18n-attr="title:home.tryLive"
                                 href="https://opensea.io/collection/patacon-friends" target="_blank">
                                 <div class="media-container">
                                     <img src="assets/img/services/pf-images.png" alt="Patacon Friends NFT">
                                 </div>
                             </a>
-                            <h3 class="section-text-m">Patacon Friends : A random NFT ERC721 smart contract on Polygon mainnet</h3>
+                            <h3 class="section-text-m" data-i18n="home.patacon">Patacon Friends : A random NFT ERC721 smart contract on Polygon mainnet</h3>
                             <div class="buttons">
-                                <a class="btn btn-primary" href="https://opensea.io/collection/patacon-friends" target="_blank">view</a>
-                                <a class="btn btn-primary" href="https://github.com/daniel0ar/pataconfriends" target="_blank"><i class='bx bxl-github bx-fw'></i>code</a>
+                                <a class="btn btn-primary" href="https://opensea.io/collection/patacon-friends" target="_blank" data-i18n="common.view">view</a>
+                                <a class="btn btn-primary" href="https://github.com/daniel0ar/pataconfriends" target="_blank"><i class='bx bxl-github bx-fw'></i><span data-i18n="common.code">code</span></a>
                             </div>
                         </div>
                     </div>
@@ -253,15 +260,15 @@
         <section id="about" class="about" data-aos="fade-up">
             <div class="container text-center">
                 <div class="circular-img">
-                    <img src="assets/img/daniel.jpg" alt="me">
+                    <img src="assets/img/daniel.jpg" alt="me" data-i18n-attr="alt:home.meAlt">
                 </div>
-                <h3 class="section-text-m">I excel at engineering user friendly, clean and mantainable decentralized web applications.</h3>
+                <h3 class="section-text-m" data-i18n="home.about1">I excel at engineering user friendly, clean and mantainable decentralized web applications.</h3>
                 <hr>
-                <h3 class="section-text-l">I have worked on ► crypto startups, local businesses, global remote teams on
+                <h3 class="section-text-l" data-i18n="home.about2">I have worked on ► crypto startups, local businesses, global remote teams on
                     Ethereum, Polygon, Monad, Base, Solana and more. </h3>
                 <hr>
-                <p>Check my CV!</p>
-                <a class="btn btn-primary" href="assets/docs/CV_Daniel_Arroyo_EN.pdf" download><i class='bx bx-download bx-fw'></i>Download</a>
+                <p data-i18n="home.cv">Check my CV!</p>
+                <a class="btn btn-primary" href="assets/docs/CV_Daniel_Arroyo_EN.pdf" download><i class='bx bx-download bx-fw'></i><span data-i18n="home.download">Download</span></a>
             </div>
         </section>
 
@@ -269,7 +276,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-xl-6">
-                        <p class="section-text-l">Contact me for projects or hire me!</p>
+                        <p class="section-text-l" data-i18n="home.contact">Contact me for projects or hire me!</p>
                         <hr>
                         <p class="section-text-l"><a href="mailto:dani3.a@proton.me">dani3.a@proton.me</a></p>
 
@@ -285,13 +292,13 @@
             </div>
         </section>
 
-        <section class="footer">
+        <section class="footer" data-i18n="common.footer">
             Site designed and built by me.
         </section>
 
         <div class="navbar sticky-bottom justify-content-between">
-            <a href="#about">About</a>
-            <a class="btn btn-cta" href="mailto:dani3.a@proton.me">Contact</a>
+            <a href="#about" data-i18n="home.navAbout">About</a>
+            <a href="mailto:dani3.a@proton.me" data-i18n="home.navContact">Contact</a>
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"

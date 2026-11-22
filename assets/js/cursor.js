@@ -12,7 +12,7 @@ document.addEventListener('click', () => {
     }, 500)
 })
 
-document.querySelectorAll("a").forEach(item => {
+document.querySelectorAll("a, button").forEach(item => {
     item.addEventListener('mouseover', () => {
         cursor.classList.add("hover");
     })

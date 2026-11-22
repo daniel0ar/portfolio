@@ -111,3 +111,55 @@ section .media-container{
         font-size: 2rem;
     }
 }
+
+/*---------------------
+    Language selector
+-------------------- */
+html.i18n-pending body {
+    visibility: hidden;
+}
+
+html[lang="en"] [data-lang="es"],
+html[lang="es"] [data-lang="en"] {
+    display: none !important;
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.lang-switch {
+    display: inline-flex;
+    border: 2px solid black;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.lang-switch button[type="button"] {
+    min-width: 40px;
+    padding: 4px 8px;
+    border: 0;
+    background: white;
+    color: black;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: none;
+}
+
+.lang-switch button[aria-pressed="true"] {
+    background: black;
+    color: white;
+}
+
+.lang-switch button:focus-visible {
+    outline: 2px solid #1144ec;
+    outline-offset: -2px;
+}
+
+@media (max-width: 768px) {
+    .nav-actions {
+        gap: 12px;
+    }
+}
