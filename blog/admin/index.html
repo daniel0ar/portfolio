@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Blog Admin - Dani3</title>
+    <link rel="icon" href="/favicon.ico">
+    <link rel="stylesheet" href="/assets/vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/layout.css">
+    <link rel="stylesheet" href="/assets/css/blog.css">
+    <link rel="stylesheet" href="/assets/css/admin.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="blog admin">
+    <main class="admin-shell">
+        <form id="login" class="admin-login" hidden>
+            <h1>Blog admin</h1>
+            <label for="password">Password</label>
+            <input id="password" type="password" autocomplete="current-password" required autofocus>
+            <button class="btn btn-bw" type="submit">Enter</button>
+            <p class="admin-error" id="login-error" role="alert"></p>
+        </form>
+
+        <div id="app" hidden>
+            <header class="admin-header">
+                <h1>Blog admin</h1>
+                <div>
+                    <button class="admin-link" id="new-article" type="button">New article</button>
+                    <button class="admin-link" id="logout" type="button">Log out</button>
+                </div>
+            </header>
+
+            <section class="admin-drafts" aria-labelledby="drafts-title">
+                <h2 id="drafts-title">Drafts</h2>
+                <ul id="drafts"></ul>
+                <p id="drafts-empty" class="admin-muted" hidden>No drafts yet.</p>
+            </section>
+
+            <form id="editor">
+                <label for="slug">URL slug</label>
+                <div class="admin-slug">
+                    <span>/blog/</span>
+                    <input id="slug" placeholder="my-new-article" pattern="[a-z0-9]+(-[a-z0-9]+)*" spellcheck="false">
+                </div>
+
+                <div class="admin-columns">
+                    <fieldset data-editor-lang="es">
+                        <legend>Español</legend>
+                        <label for="es-title">Título</label>
+                        <input id="es-title" data-field="title" lang="es">
+                        <label for="es-excerpt">Resumen</label>
+                        <input id="es-excerpt" data-field="excerpt" lang="es">
+                        <div class="admin-body-label">
+                            <label for="es-body">Artículo (Markdown)</label>
+                            <button class="admin-link" type="button" data-preview-toggle>Preview</button>
+                        </div>
+                        <textarea id="es-body" data-field="body" lang="es" rows="20"></textarea>
+                        <div class="article-body admin-preview" data-preview hidden></div>
+                    </fieldset>
+
+                    <fieldset data-editor-lang="en">
+                        <legend>English</legend>
+                        <label for="en-title">Title</label>
+                        <input id="en-title" data-field="title" lang="en">
+                        <label for="en-excerpt">Excerpt</label>
+                        <input id="en-excerpt" data-field="excerpt" lang="en">
+                        <div class="admin-body-label">
+                            <label for="en-body">Article (Markdown)</label>
+                            <button class="admin-link" type="button" data-preview-toggle>Preview</button>
+                        </div>
+                        <textarea id="en-body" data-field="body" lang="en" rows="20"></textarea>
+                        <div class="article-body admin-preview" data-preview hidden></div>
+                    </fieldset>
+                </div>
+
+                <div class="admin-actions">
+                    <p id="status" role="status"></p>
+                    <button class="btn btn-outline-dark" id="save-draft" type="button">Draft</button>
+                    <button class="btn btn-bw" id="publish" type="submit">Save</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <script src="/assets/js/markdown.js"></script>
+    <script src="/assets/js/admin.js"></script>
+</body>
+
+</html>
